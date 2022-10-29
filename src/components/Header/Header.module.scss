@@ -1,0 +1,263 @@
+.header {
+  position: relative;
+  overflow-y: none;
+  overflow-x: none;
+
+  .shadowTop {
+    z-index: -1;
+    position: absolute;
+    width: 742px;
+    height: 597px;
+    top: -7%;
+    left: 0;
+    background: radial-gradient(
+      50% 50% at 37.4% 41.46%,
+      rgba(255, 255, 255, 0.09) 0%,
+      rgba(196, 196, 196, 0) 100%
+    );
+
+    @media (max-width: 480px) {
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(255, 255, 255, 0.09) 0%,
+        rgba(196, 196, 196, 0) 100%
+      );
+      width: 376px;
+      height: 303px;
+      left: -120px;
+      top: -120px;
+    }
+  }
+
+  .shadowRight {
+    position: absolute;
+    top: 57px;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(255, 255, 255, 0.09) 0%,
+      rgba(196, 196, 196, 0) 100%
+    );
+    width: 742px;
+    height: 597px;
+    right: -10% !important;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    z-index: 0;
+
+    @media (max-width: 480px) {
+      background: linear-gradient(
+        180deg,
+        rgba(0, 65, 218, 0.115) 0%,
+        rgba(40, 0, 153, 0.115) 91.72%
+      );
+      filter: blur(80px);
+      border-radius: 2.71815e7px;
+      transform: rotate(131.65deg);
+      width: 320px;
+      height: 190px;
+      top: -100px !important;
+      left: 70%;
+      transform: translate(-50%, 0);
+      z-index: 1 !important;
+    }
+  }
+
+  .shadowRight {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    z-index: 0;
+  }
+
+  @media (min-width: 1920px) {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  &Main {
+    background-image: url('./assets/bg.webp');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    background-position-y: 0%;
+    min-height: 670px;
+    padding-top: 100px;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: 480px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 700px;
+      padding-top: 50px;
+    }
+
+    .stepsPicture {
+      position: absolute;
+      right: -224px;
+      user-select: none;
+      -webkit-user-drag: none;
+      z-index: -1;
+
+      @media (max-width: 480px) {
+        bottom: -68px;
+        width: 500px;
+        height: 272px;
+        object-fit: contain;
+        right: -230px;
+      }
+    }
+
+    .cryptoTrading {
+      font-weight: 500;
+      font-size: 19.2776px;
+      line-height: 23px;
+      text-transform: uppercase;
+      color: #aaaaaa;
+      opacity: 0;
+      display: block;
+      animation: fadeIn 1s forwards ease-out 0.8s;
+
+      @media (max-width: 480px) {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+
+    h1 {
+      margin: 32px 0;
+      font-weight: 600;
+      font-size: 96.3878px;
+      line-height: 90px;
+      color: #ffffff;
+      opacity: 0;
+      animation: fadeIn 1s forwards ease-out 1s;
+
+      @media (max-width: 480px) {
+        font-size: 52px;
+        line-height: 61px;
+        margin: 16px 0 20px;
+      }
+
+      span {
+        display: block;
+        background: linear-gradient(
+          89.95deg,
+          #487fff -1.65%,
+          #73b5ff 51.06%,
+          #cb76ff 99.96%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-shadow: 0px 5.14068px 5.14068px rgba(0, 0, 0, 0.25);
+
+        b {
+          background: linear-gradient(
+            89.95deg,
+            #487fff -1.65%,
+            #73b5ff 51.06%,
+            #cb76ff 99.96%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          text-shadow: 0px 5.14068px 5.14068px rgba(0, 0, 0, 0.25);
+          animation: tick 1s infinite cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          letter-spacing: -0.02em;
+        }
+      }
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: 25.7034px;
+      line-height: 30px;
+      color: #e9e9e9;
+      max-width: 560px;
+      opacity: 0;
+      animation: fadeIn 1s forwards ease-out 1.2s;
+
+      @media (max-width: 480px) {
+        font-size: 18px;
+        line-height: 140%;
+      }
+    }
+
+    .btnWrapper {
+      margin: 94px 0 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      opacity: 0;
+      animation: buttonAnim 1s forwards ease;
+
+      @media (max-width: 480px) {
+        margin-top: 40px;
+      }
+    }
+
+    button {
+      display: flex;
+      color: #fff;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      gap: 34px;
+      align-items: center;
+      background: linear-gradient(140.6deg, #3e6ff9 -27.18%, #3e53f8 126.06%);
+      padding: 17px 22px 17px 30px;
+
+      @media (max-width: 480px) {
+        margin-top: 0;
+        padding: 14px 14px 14px 30px;
+        font-size: 15px;
+        line-height: 18px;
+      }
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+    }
+  }
+}
+
+@keyframes tick {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes buttonAnim {
+  from {
+    opacity: 0;
+    transform: translate(0, -20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

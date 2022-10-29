@@ -1,0 +1,100 @@
+@import 'fonts';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Mazzard';
+  font-weight: 400;
+  background: #000;
+  color: #fff;
+  z-index: -10;
+
+  #root {
+    overflow: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    appearance: none;
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    appearance: none;
+    background: rgba(62, 111, 249, 0.7);
+    border-radius: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    appearance: none;
+    background: rgba(62, 111, 249, 0.1);
+  }
+}
+
+#shadow-1 {
+  top: 150px;
+  right: -680px;
+}
+
+#shadow-2 {
+  top: 1200px;
+  left: -300px;
+}
+
+.rectangle-shadow {
+  position: absolute;
+  width: 1185px;
+  height: 703px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 65, 218, 0.115) 0%,
+    rgba(40, 0, 153, 0.115) 91.72%
+  );
+  filter: blur(100px);
+  transform: rotate(131.65deg);
+
+  @media (max-width: 480px) {
+    width: 589.46px;
+    height: 349.73px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: 'Mazzard';
+}
+
+button,
+li {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: 480px) {
+    max-width: 100%;
+    padding: 0 28px;
+  }
+}
+
+.section__title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+
+  @media (max-width: 480px) {
+    font-size: 35px;
+  }
+}

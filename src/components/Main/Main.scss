@@ -1,0 +1,75 @@
+.main {
+  padding: 0 0 162px;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 480px) {
+    padding: 78px 0 50px;
+  }
+
+  @media (min-width: 1920px) {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .ellipses {
+    position: absolute;
+    right: -540px;
+    animation: rotate 60s infinite linear;
+    z-index: -1;
+
+    @media (min-width: 1921px) {
+      right: 0;
+    }
+
+    @media (max-width: 480px) {
+      left: -80% !important;
+      right: unset;
+    }
+  }
+
+  .main__span {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #aaaaaa;
+  }
+
+  .mouse-scroll-row {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 480px) {
+      display: none;
+    }
+
+    > svg {
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+  }
+}
+
+@keyframes mainAnim {
+  0% {
+    transform: translate(-50px, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
