@@ -60,7 +60,7 @@
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.8px) {
       flex-direction: column-reverse;
       gap: 50px;
     }
@@ -90,6 +90,23 @@
         flex-direction: column;
         gap: 20px;
         position: relative;
+
+        span {
+          @media (max-width: 374.8px) {
+            max-width: 125px !important;
+            min-width: 125px !important;
+          }
+        }
+
+        .inner-bg {
+          @media (max-width: 374.8px) {
+            max-width: 123px !important;
+            min-width: 123px !important;
+            font-size: 10px;
+            padding: 0 5px;
+            line-height: 140%;
+          }
+        }
 
         .mobile-lines {
           display: none;
@@ -255,6 +272,16 @@
           padding: 24px 20px;
         }
 
+        @media (max-width: 374.8px) {
+          padding: 24px 10px;
+        }
+
+        .inner-bg {
+          @media (max-width: 374.8px) {
+            font-size: 10px;
+          }
+        }
+
         &.box-1 {
           display: flex;
           flex-direction: column;
@@ -265,6 +292,20 @@
             max-width: 100%;
             width: 100%;
             display: block;
+          }
+
+          span {
+            @media (max-width: 374.8px) {
+              max-width: 125px !important;
+              min-width: 125px !important;
+            }
+          }
+
+          .inner-bg {
+            @media (max-width: 374.8px) {
+              max-width: 123px !important;
+              min-width: 123px !important;
+            }
           }
 
           span:first-child {
@@ -303,6 +344,11 @@
               margin: 0 !important;
               max-width: 130px !important;
               min-width: 130px !important;
+
+              @media (max-width: 374.8px) {
+                max-width: 125px !important;
+                min-width: 125px !important;
+              }
             }
 
             @media (max-width: 480px) {
@@ -493,6 +539,19 @@
       max-width: 415px;
       width: 100%;
 
+      @media (min-width: 1200px) and (max-width: 1280px) {
+        max-width: 380px;
+      }
+
+      @media (max-width: 1199.8px) {
+        max-width: 80%;
+        width: 100%;
+      }
+
+      @media (max-width: 480px) {
+        max-width: 100%;
+      }
+
       .descriptionAnim {
         animation: descriptionAnim forwards 1s ease;
       }
@@ -505,6 +564,10 @@
         color: #ffffff;
         margin-bottom: 20px;
         opacity: 0;
+
+        @media (max-width: 374.8px) {
+          font-size: 36px;
+        }
 
         b {
           font-weight: 500;

@@ -133,7 +133,12 @@
       opacity: 0;
       animation: fadeIn 1s forwards ease-out 1s;
 
+      @media (max-width: 1199.8px) {
+        max-width: 50%;
+      }
+
       @media (max-width: 480px) {
+        max-width: 100%;
         font-size: 52px;
         line-height: 61px;
         margin: 16px 0 20px;
