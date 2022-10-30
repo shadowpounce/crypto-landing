@@ -26,18 +26,21 @@ const CardsLayout = ({ currentScroll }) => {
       .forEach((card) => (card.style.filter = `none`))
   }
 
-  cardsLayout
-    ? cardsLayout
-        .querySelector('.container')
-        .addEventListener('mousemove', (e) => {
-          if (e.target.classList.contains('card__content')) {
-            blurAllCards()
-            e.target.closest('.card').style.filter = `none`
-          } else {
-            showAllCards()
-          }
-        })
-    : void 0
+  if (cardsLayout) {
+    const container = cardsLayout.querySelector('.container')
+    container.addEventListener('mousemove', (e) => {
+      if (e.target.classList.contains('card__content')) {
+        blurAllCards()
+        e.target.closest('.card').style.filter = `none`
+      } else {
+        showAllCards()
+      }
+    })
+
+    container.addEventListener('mouseout', () => {
+      showAllCards()
+    })
+  }
 
   return (
     <section className="cards-layout">
